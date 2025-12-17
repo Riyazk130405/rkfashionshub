@@ -16,7 +16,8 @@
 
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            margin: 0; padding: 0;
+            margin: 0;
+            padding: 0;
             background-color: var(--light-pink-bg);
             color: var(--dark-text);
         }
@@ -28,47 +29,64 @@
             padding: 12px 0;
             font-weight: bold;
             font-size: 0.9rem;
-            position: sticky; top: 0; z-index: 1001;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            position: sticky;
+            top: 0;
+            z-index: 1001;
         }
 
-        header { text-align: center; padding: 30px 20px; }
-        .brand-name { font-size: 2.8rem; color: var(--deep-purple); font-family: 'Georgia', serif; font-weight: bold; margin: 0; }
-        .brand-tagline { color: var(--accent-berry); font-style: italic; margin-top: 5px; }
-
-        /* Search Bar Styling */
-        .search-container {
-            max-width: 600px;
-            margin: 20px auto;
+        header {
+            background: var(--light-pink-bg);
+            padding: 40px 20px;
             text-align: center;
-            padding: 0 20px;
         }
 
-        #searchInput {
-            width: 100%;
-            padding: 15px 25px;
-            border-radius: 50px;
-            border: 2px solid var(--accent-berry);
-            font-size: 1rem;
-            outline: none;
-            box-shadow: 0 5px 15px rgba(157, 78, 221, 0.1);
+        .brand-name {
+            font-size: 3rem;
+            color: var(--deep-purple);
+            margin: 0;
+            font-family: 'Georgia', serif;
+            letter-spacing: 3px;
+            font-weight: bold;
         }
 
-        .container { max-width: 1200px; margin: auto; padding: 20px; }
+        .brand-tagline {
+            color: var(--accent-berry);
+            font-style: italic;
+            margin-top: 8px;
+            font-size: 1.1rem;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: auto;
+            padding: 20px;
+        }
 
         .offer-section {
             background: var(--white);
             border: 3px solid var(--accent-berry);
             border-radius: 20px;
-            margin-bottom: 40px;
-            padding: 25px;
-            display: flex; justify-content: space-around; flex-wrap: wrap; text-align: center;
+            margin: 20px 0 40px;
+            padding: 30px;
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            text-align: center;
+            box-shadow: 0 10px 20px rgba(157, 78, 221, 0.15);
         }
 
         .price { font-size: 2rem; font-weight: 900; color: var(--deep-purple); }
 
         .section-title {
-            text-align: center; margin: 50px 0 30px; font-size: 2.2rem;
-            color: var(--deep-purple); border-bottom: 2px solid var(--accent-berry); display: block;
+            text-align: center;
+            margin: 60px 0 30px;
+            font-size: 2.5rem;
+            color: var(--deep-purple);
+            font-family: 'Georgia', serif;
+            border-bottom: 2px solid var(--accent-berry);
+            padding-bottom: 10px;
         }
 
         .product-grid {
@@ -78,34 +96,69 @@
         }
 
         .product-card {
-            background: var(--white); border-radius: 20px; overflow: hidden;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05); transition: 0.3s;
-            text-align: center; padding-bottom: 20px;
+            background: var(--white);
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            transition: transform 0.3s ease;
+            text-align: center;
+            padding-bottom: 20px;
+            border: 1px solid rgba(123, 44, 191, 0.1);
         }
 
         .product-card:hover { transform: translateY(-8px); }
-        .product-img { width: 100%; height: 250px; background-color: #fdf2f8; display: flex; align-items: center; justify-content: center; color: #d1b3c4; }
+
+        .product-img {
+            width: 100%;
+            height: 250px;
+            background-color: #fdf2f8;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #d1b3c4;
+            object-fit: cover;
+            font-weight: bold;
+        }
+
         .product-name { font-size: 1.1rem; margin: 15px 0 5px; font-weight: 600; }
         .product-price { color: var(--accent-berry); font-weight: bold; margin-bottom: 15px; }
 
         .buy-now {
-            background-color: var(--deep-purple); color: white; padding: 10px 20px;
-            text-decoration: none; border-radius: 50px; font-weight: bold;
+            background-color: var(--deep-purple);
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 50px;
+            display: inline-block;
+            font-size: 0.9rem;
+            font-weight: bold;
         }
 
         .whatsapp-btn {
-            position: fixed; bottom: 30px; right: 30px; background-color: #25d366;
-            color: white; width: 60px; height: 60px; border-radius: 50%;
-            display: flex; align-items: center; justify-content: center; font-size: 30px; z-index: 1000;
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            background-color: #25d366;
+            color: white;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 30px;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+            text-decoration: none;
+            z-index: 1000;
         }
 
-        footer { text-align: center; padding: 50px; color: var(--deep-purple); }
+        footer { text-align: center; padding: 60px 20px; color: var(--deep-purple); }
     </style>
 </head>
 <body>
 
     <div class="promo-banner">
-        💖 4 Small @ ₹49 | 4 Big @ ₹89 — LIMITED OFFER 💖
+        💖 LIMITED OFFER: 4 Small Scrunchies @ ₹49 | 4 Big Scrunchies @ ₹89 💖
     </div>
 
     <header>
@@ -113,63 +166,127 @@
         <div class="brand-tagline">Premium Hair & Hand Accessories</div>
     </header>
 
-    <div class="search-container">
-        <input type="text" id="searchInput" onkeyup="searchProducts()" placeholder="Search for hair bands, bracelets, velvet...">
-    </div>
-
     <div class="container">
         
         <div class="offer-section">
-            <div><h3>4 Small Scrunchies</h3><div class="price">₹49</div></div>
-            <div><h3>4 Big Scrunchies</h3><div class="price">₹89</div></div>
+            <div class="offer-card"><h3>4 Small Scrunchies</h3><div class="price">₹49</div></div>
+            <div class="offer-card"><h3>4 Big Scrunchies</h3><div class="price">₹89</div></div>
         </div>
 
-        <h2 class="section-title">✨ Hair Bands</h2>
-        <div class="product-grid" id="hairBands">
-            <div class="product-card"> <div class="product-img">HB 1</div> <div class="product-name">Velvet Dream</div> <div class="product-price">₹149</div> <a href="https://wa.me/916303777398" class="buy-now">Order Now</a> </div>
-            <div class="product-card"> <div class="product-img">HB 2</div> <div class="product-name">Silk Knot</div> <div class="product-price">₹129</div> <a href="https://wa.me/916303777398" class="buy-now">Order Now</a> </div>
-            <div class="product-card"> <div class="product-img">HB 3</div> <div class="product-name">Floral Sparkle</div> <div class="product-price">₹99</div> <a href="https://wa.me/916303777398" class="buy-now">Order Now</a> </div>
-            <div class="product-card"> <div class="product-img">HB 4</div> <div class="product-name">Pearl Classic</div> <div class="product-price">₹199</div> <a href="https://wa.me/916303777398" class="buy-now">Order Now</a> </div>
-            <div class="product-card"> <div class="product-img">HB 5</div> <div class="product-name">Boho Print</div> <div class="product-price">₹110</div> <a href="https://wa.me/916303777398" class="buy-now">Order Now</a> </div>
-            <div class="product-card"> <div class="product-img">HB 6</div> <div class="product-name">Satin Glow</div> <div class="product-price">₹135</div> <a href="https://wa.me/916303777398" class="buy-now">Order Now</a> </div>
-            <div class="product-card"> <div class="product-img">HB 7</div> <div class="product-name">Pastel Twist</div> <div class="product-price">₹150</div> <a href="https://wa.me/916303777398" class="buy-now">Order Now</a> </div>
-            <div class="product-card"> <div class="product-img">HB 8</div> <div class="product-name">Royal Gold</div> <div class="product-price">₹250</div> <a href="https://wa.me/916303777398" class="buy-now">Order Now</a> </div>
+        <h2 class="section-title">✨ Hair Bands Collection</h2>
+        <div class="product-grid">
+            <div class="product-card">
+                <div class="product-img">Hair Band 1</div>
+                <div class="product-name">Velvet Dream Band</div>
+                <div class="product-price">₹149</div>
+                <a href="https://wa.me/916303777398?text=I want Velvet Dream Hair Band" class="buy-now">Order Now</a>
+            </div>
+            <div class="product-card">
+                <div class="product-img">Hair Band 2</div>
+                <div class="product-name">Silk Knot Band</div>
+                <div class="product-price">₹129</div>
+                <a href="https://wa.me/916303777398" class="buy-now">Order Now</a>
+            </div>
+            <div class="product-card">
+                <div class="product-img">Hair Band 3</div>
+                <div class="product-name">Floral Sparkle</div>
+                <div class="product-price">₹99</div>
+                <a href="https://wa.me/916303777398" class="buy-now">Order Now</a>
+            </div>
+            <div class="product-card">
+                <div class="product-img">Hair Band 4</div>
+                <div class="product-name">Pearl Classic</div>
+                <div class="product-price">₹199</div>
+                <a href="https://wa.me/916303777398" class="buy-now">Order Now</a>
+            </div>
+            <div class="product-card">
+                <div class="product-img">Hair Band 5</div>
+                <div class="product-name">Boho Print</div>
+                <div class="product-price">₹110</div>
+                <a href="https://wa.me/916303777398" class="buy-now">Order Now</a>
+            </div>
+            <div class="product-card">
+                <div class="product-img">Hair Band 6</div>
+                <div class="product-name">Satin Glow</div>
+                <div class="product-price">₹135</div>
+                <a href="https://wa.me/916303777398" class="buy-now">Order Now</a>
+            </div>
+            <div class="product-card">
+                <div class="product-img">Hair Band 7</div>
+                <div class="product-name">Pastel Twist</div>
+                <div class="product-price">₹150</div>
+                <a href="https://wa.me/916303777398" class="buy-now">Order Now</a>
+            </div>
+            <div class="product-card">
+                <div class="product-img">Hair Band 8</div>
+                <div class="product-name">Royal Gold Band</div>
+                <div class="product-price">₹250</div>
+                <a href="https://wa.me/916303777398" class="buy-now">Order Now</a>
+            </div>
         </div>
 
-        <h2 class="section-title">✨ Hand Bands</h2>
-        <div class="product-grid" id="handBands">
-            <div class="product-card"> <div class="product-img">HB 1</div> <div class="product-name">Crystal Charm</div> <div class="product-price">₹199</div> <a href="https://wa.me/916303777398" class="buy-now">Order Now</a> </div>
-            <div class="product-card"> <div class="product-img">HB 2</div> <div class="product-name">Silver Beaded</div> <div class="product-price">₹149</div> <a href="https://wa.me/916303777398" class="buy-now">Order Now</a> </div>
-            <div class="product-card"> <div class="product-img">HB 3</div> <div class="product-name">Rose Gold Cuff</div> <div class="product-price">₹299</div> <a href="https://wa.me/916303777398" class="buy-now">Order Now</a> </div>
-            <div class="product-card"> <div class="product-img">HB 4</div> <div class="product-name">Evil Eye Band</div> <div class="product-price">₹120</div> <a href="https://wa.me/916303777398" class="buy-now">Order Now</a> </div>
-            <div class="product-card"> <div class="product-img">HB 5</div> <div class="product-name">Minimalist Chain</div> <div class="product-price">₹180</div> <a href="https://wa.me/916303777398" class="buy-now">Order Now</a> </div>
-            <div class="product-card"> <div class="product-img">HB 6</div> <div class="product-name">Friendship Special</div> <div class="product-price">₹80</div> <a href="https://wa.me/916303777398" class="buy-now">Order Now</a> </div>
-            <div class="product-card"> <div class="product-img">HB 7</div> <div class="product-name">Leather Wrap</div> <div class="product-price">₹220</div> <a href="https://wa.me/916303777398" class="buy-now">Order Now</a> </div>
-            <div class="product-card"> <div class="product-img">HB 8</div> <div class="product-name">Starry Night</div> <div class="product-price">₹160</div> <a href="https://wa.me/916303777398" class="buy-now">Order Now</a> </div>
+        <h2 class="section-title">✨ Hand Bands Collection</h2>
+        <div class="product-grid">
+            <div class="product-card">
+                <div class="product-img">Hand Band 1</div>
+                <div class="product-name">Crystal Charm</div>
+                <div class="product-price">₹199</div>
+                <a href="https://wa.me/916303777398" class="buy-now">Order Now</a>
+            </div>
+            <div class="product-card">
+                <div class="product-img">Hand Band 2</div>
+                <div class="product-name">Silver Beaded</div>
+                <div class="product-price">₹149</div>
+                <a href="https://wa.me/916303777398" class="buy-now">Order Now</a>
+            </div>
+            <div class="product-card">
+                <div class="product-img">Hand Band 3</div>
+                <div class="product-name">Rose Gold Cuff</div>
+                <div class="product-price">₹299</div>
+                <a href="https://wa.me/916303777398" class="buy-now">Order Now</a>
+            </div>
+            <div class="product-card">
+                <div class="product-img">Hand Band 4</div>
+                <div class="product-name">Evil Eye Band</div>
+                <div class="product-price">₹120</div>
+                <a href="https://wa.me/916303777398" class="buy-now">Order Now</a>
+            </div>
+            <div class="product-card">
+                <div class="product-img">Hand Band 5</div>
+                <div class="product-name">Minimalist Chain</div>
+                <div class="product-price">₹180</div>
+                <a href="https://wa.me/916303777398" class="buy-now">Order Now</a>
+            </div>
+            <div class="product-card">
+                <div class="product-img">Hand Band 6</div>
+                <div class="product-name">Friendship Special</div>
+                <div class="product-price">₹80</div>
+                <a href="https://wa.me/916303777398" class="buy-now">Order Now</a>
+            </div>
+            <div class="product-card">
+                <div class="product-img">Hand Band 7</div>
+                <div class="product-name">Leather Wrap</div>
+                <div class="product-price">₹220</div>
+                <a href="https://wa.me/916303777398" class="buy-now">Order Now</a>
+            </div>
+            <div class="product-card">
+                <div class="product-img">Hand Band 8</div>
+                <div class="product-name">Starry Night Band</div>
+                <div class="product-price">₹160</div>
+                <a href="https://wa.me/916303777398" class="buy-now">Order Now</a>
+            </div>
         </div>
 
     </div>
 
     <footer>
-        <p>&copy; 2024 <strong>RK Fashions Hub</strong> | +91 63037 77398</p>
+        <p>&copy; 2024 <strong>RK Fashions Hub</strong></p>
+        <p>WhatsApp: +91 63037 77398</p>
     </footer>
 
-    <a href="https://wa.me/916303777398" class="whatsapp-btn" target="_blank"><i class="fab fa-whatsapp"></i></a>
+    <a href="https://wa.me/916303777398" class="whatsapp-btn" target="_blank">
+        <i class="fab fa-whatsapp"></i>
+    </a>
 
-    <script>
-        function searchProducts() {
-            let input = document.getElementById('searchInput').value.toLowerCase();
-            let cards = document.getElementsByClassName('product-card');
-            
-            for (let i = 0; i < cards.length; i++) {
-                let productName = cards[i].querySelector('.product-name').innerText.toLowerCase();
-                if (productName.includes(input)) {
-                    cards[i].style.display = "";
-                } else {
-                    cards[i].style.display = "none";
-                }
-            }
-        }
-    </script>
 </body>
 </html>
