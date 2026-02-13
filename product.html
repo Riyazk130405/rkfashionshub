@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Product Details</title>
+
+<style>
+body{
+font-family:Arial;
+background:#fff0f6;
+text-align:center;
+padding:40px;
+}
+
+.box{
+background:white;
+padding:30px;
+border-radius:20px;
+max-width:700px;
+margin:auto;
+}
+
+img{
+width:100%;
+max-width:350px;
+border-radius:15px;
+margin:10px;
+}
+
+.buy-btn{
+background:#7b2cbf;
+color:white;
+padding:15px 25px;
+text-decoration:none;
+border-radius:30px;
+display:inline-block;
+margin-top:20px;
+font-weight:bold;
+}
+</style>
+</head>
+
+<body>
+
+<div class="box">
+
+<h1 id="pname"></h1>
+
+<div>
+<img id="img1">
+<img id="img2">
+<img id="img3">
+</div>
+
+<h2 id="pprice"></h2>
+
+<p id="pdesc"></p>
+
+<a id="buybtn" class="buy-btn">Order on WhatsApp</a>
+
+</div>
+
+<script>
+const params=new URLSearchParams(window.location.search);
+
+const name=params.get("name");
+const price=params.get("price");
+const desc=params.get("desc");
+const img1=params.get("img1");
+const img2=params.get("img2");
+const img3=params.get("img3");
+
+document.getElementById("pname").innerText=name;
+document.getElementById("pprice").innerText="₹"+price;
+document.getElementById("pdesc").innerText=desc;
+
+document.getElementById("img1").src=img1;
+document.getElementById("img2").src=img2;
+document.getElementById("img3").src=img3;
+
+document.getElementById("buybtn").href=
+"https://wa.me/916303777398?text=I want "+name;
+</script>
+
+</body>
+</html>
